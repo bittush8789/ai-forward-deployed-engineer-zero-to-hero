@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practical Machine Learning & Statistics Academy</title>
+    <meta name="description" content="Unified learning dashboard and interactive simulator platform for mastering descriptive stats, probability models, feature engineering, and production-grade ML pipelines.">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar" id="sidebar-nav" role="complementary">
+        <div class="logo-container">
+            <div class="logo-icon">🤖</div>
+            <div class="logo-text">
+                <h1>AI FDE Academy</h1>
+                <p>Curriculum Hub</p>
+            </div>
+        </div>
+
+        <nav class="nav-section" aria-label="Course Modules Navigation">
+            <span class="nav-section-title">Course Material</span>
+            <ul class="nav-list">
+                <li><div class="nav-item active" data-page="page-dashboard" id="nav-dash">⚡ Overview Dashboard</div></li>
+                <li><div class="nav-item" data-page="page-stats-modules" id="nav-stats-mods">📊 Part 1: Statistics Core</div></li>
+                <li><div class="nav-item" data-page="page-ml-modules" id="nav-ml-mods">🤖 Part 2: ML Core</div></li>
+                <li><div class="nav-item" data-page="page-projects" id="nav-projs">🛠️ Projects & Capstones</div></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-section" aria-label="Playground Navigation">
+            <span class="nav-section-title">Playground</span>
+            <ul class="nav-list">
+                <li><div class="nav-item" data-page="page-stats-calculators" id="nav-stats-calcs">📉 Stats Calculators</div></li>
+                <li><div class="nav-item" data-page="page-ml-simulators" id="nav-ml-sims">⚙️ ML Simulators</div></li>
+                <li><div class="nav-item" data-page="page-quizzes" id="nav-quiz">🧠 Knowledge Checkpoints</div></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content Panel -->
+    <main class="main-content" id="main-content-view">
+        
+        <!-- SECTION 1: Overview Dashboard -->
+        <section id="page-dashboard" class="page-view">
+            <div class="glass-card card-header-gradient">
+                <span class="glow-text-purple" style="font-weight: 600; text-transform: uppercase; letter-spacing: 2px; font-size: 0.85rem;">Phase 3: Foundations & Pipelines</span>
+                <h2 class="page-title" style="margin-top: 0.5rem;">Learn Practical ML & Statistics</h2>
+                <p class="page-subtitle">A code-first, production-driven academy curriculum. Learn features modeling, algorithm selection, hyperparameter sweeps, and serialization.</p>
+                
+                <div class="highlight-box">
+                    <strong>Welcome Engineer!</strong> You have successfully unlocked both **Part 1 (Statistics & Probability)** and **Part 2 (Machine Learning Core)**. Use the sidebar tabs to explore curriculum modules, run scripts, test tuning parameters, and practice interview questions.
+                </div>
+            </div>
+
+            <div class="calculator-grid">
+                <!-- Statistics Core Summary -->
+                <div class="calc-panel">
+                    <h3 class="calc-title" style="color: var(--accent-purple);">📊 Part 1: Statistics & Probability</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 1.8; font-size: 0.9rem;">
+                        <li><span style="color: var(--accent-purple);">✔</span> <strong>M1-M3:</strong> Descriptive Stats, Outliers, Correlation</li>
+                        <li><span style="color: var(--accent-purple);">✔</span> <strong>M4-M5:</strong> A/B Testing, Imputation, Preprocessing</li>
+                        <li><span style="color: var(--accent-purple);">✔</span> <strong>M6-M7:</strong> Clickstream probabilities, Bayes Spam Classifier</li>
+                        <li><span style="color: var(--accent-purple);">✔</span> <strong>M8-M10:</strong> SaaS expected CLV, Poisson modeling, Calibration</li>
+                    </ul>
+                </div>
+
+                <!-- ML Core Summary -->
+                <div class="calc-panel">
+                    <h3 class="calc-title" style="color: var(--accent-pink);">🤖 Part 2: Machine Learning Core</h3>
+                    <ul style="list-style: none; padding: 0; line-height: 1.8; font-size: 0.9rem;">
+                        <li><span style="color: var(--accent-pink);">✔</span> <strong>ML 1:</strong> Feature Engineering (Encoding, Scales, PCA)</li>
+                        <li><span style="color: var(--accent-pink);">✔</span> <strong>ML 2:</strong> Regressions & Classification (OLS, Trees, Forest, XGBoost)</li>
+                        <li><span style="color: var(--accent-pink);">✔</span> <strong>ML 3:</strong> Unsupervised Clustering & Isolation Forest Anomaly</li>
+                        <li><span style="color: var(--accent-pink);">✔</span> <strong>ML 4:</strong> Evaluation curves (F1-score, MAE, ROC-AUC, CV)</li>
+                        <li><span style="color: var(--accent-pink);">✔</span> <strong>ML 5:</strong> Tuning sweeps (GridSearch, RandomSearch, Regularization)</li>
+                        <li><span style="color: var(--accent-pink);">✔</span> <strong>ML 6:</strong> Pipelines & Persistence (ColumnTransformers, Joblib)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Part 1 Modules -->
+        <section id="page-stats-modules" class="page-view" style="display: none;">
+            <div class="glass-card">
+                <h2 class="page-title">Part 1: Statistics & Probability Modules</h2>
+                <p class="page-subtitle">Core math, code, business use cases, and interview prep.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/statistics/01_descriptive_stats.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-purple);">Module 1: Descriptive Stats</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Mean, Median, Std Dev, Variance, IQR, Outliers</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/statistics/02_data_distributions.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-purple);">Module 2: Shape & Scaling</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Normal PDF, Skewness, Kurtosis, Log transforms</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/statistics/03_correlation_analysis.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-purple);">Module 3: Feature Correlation</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Pearson, Spearman, Collinearity, Feature selection</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/statistics/04_sampling_inference.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-purple);">Module 4: Sampling & Inference</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Confidence Intervals, Z-tests, A/B Page Tests, CLT</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/statistics/05_statistics_for_ml.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-purple);">Module 5: Preprocessing Stats</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">EDA, missing values, Winsorization, data quality SLAs</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/probability/06_prob_fundamentals.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-cyan);">Module 6: Prob Fundamentals</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Conditional probability, addition rule, independence</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/probability/07_bayes_theorem.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-cyan);">Module 7: Bayes Theorem</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Priors, posteriors, Laplace smoothing, spam classifiers</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/probability/08_random_variables.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-cyan);">Module 8: Expected Value</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">RVs, SaaS expected CLV models, forecasting risks</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/probability/09_prob_distributions.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-cyan);">Module 9: Sizing Distributions</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Normal PDF, Binomial conversions, Poisson queries</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/probability/10_prob_in_ml.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-cyan);">Module 10: Probability in ML</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Sigmoid/Softmax calibration, threshold business optimization</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Part 2 Modules -->
+        <section id="page-ml-modules" class="page-view" style="display: none;">
+            <div class="glass-card card-header-pink">
+                <h2 class="page-title">Part 2: Machine Learning Core Modules</h2>
+                <p class="page-subtitle">Production workflows, Scikit-Learn structures, and MLOps principles.</p>
+                
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/ml_modules/01_feature_engineering.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-pink);">ML 1: Feature Engineering</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Imputation, StandardScaler vs. MinMax, OHE, L1/L2 selection, PCA</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/ml_modules/02_supervised_learning.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-pink);">ML 2: Supervised Learning</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Regressors/Classifiers: OLS, Decision Trees, Random Forest, XGBoost, SVM</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/ml_modules/03_unsupervised_learning.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-pink);">ML 3: Unsupervised Learning</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">K-Means clustering, Silhouette score, PCA projection, Isolation Forest</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/ml_modules/04_model_evaluation.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-pink);">ML 4: Model Evaluation</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Accuracy, F1, Precision/Recall, ROC-AUC, MAE, MSE, Stratified K-Fold CV</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/ml_modules/05_hyperparameter_tuning.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-pink);">ML 5: Hyperparameter Tuning</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">GridSearchCV, RandomizedSearchCV, bias-variance curves, L1/L2 bounds</p>
+                    </a>
+                    <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/ml_modules/06_scikit_learn.md" target="_blank" style="color: var(--text-main); text-decoration: none; padding: 1rem; border: 1px solid var(--border-color); border-radius: 8px; background: rgba(255,255,255,0.02);">
+                        <div style="font-weight:600; color: var(--accent-pink);">ML 6: Scikit-Learn Pipelines</div>
+                        <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.25rem;">Transformers/Estimators, ColumnTransformer, Joblib serialization, MLOps serving</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Practical Projects -->
+        <section id="page-projects" class="page-view" style="display: none;">
+            <div class="glass-card">
+                <h2 class="page-title">Projects & Capstones Portfolio</h2>
+                <p class="page-subtitle">Fully runnable python implementations. Run scripts to train models and generate visualization reports.</p>
+                
+                <div class="calculator-grid">
+                    <!-- Part 1 Mini-Projects -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title" style="color: var(--accent-purple);">📊 Part 1: Mini-Projects</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-purple);">Project 1: Customer Spend (Outliers)</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Scratch mean, median, IQR, Tukey capping.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/projects/project1_customer_spending/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-purple);">Project 2: House Price Correlation</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Pearson vs. Spearman, log-normal shape transforms.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/projects/project2_house_prices/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-purple);">Project 3: Landing Page A/B Testing</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Proportions Z-test, pooled standard error, significance.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/projects/project3_marketing_ab_test/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-purple);">Project 4: Email Bayes Spam Filter</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Vocab counts, Laplace smoothing, log multiplication.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/projects/project4_email_spam/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-purple);">Project 5: Churn Value Prediction</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Extracting probabilities, threshold optimizer loops.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/projects/project5_customer_churn/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Part 2 Capstones -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title" style="color: var(--accent-pink);">🤖 Part 2: Capstones</h3>
+                        <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1rem;">
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-pink);">Capstone 1: Customer Churn System</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">ColumnTransformer preprocessing, RandomizedSearchCV, feature rank.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/capstones/capstone1_churn/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-pink);">Capstone 2: House Price Platform</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">OLS vs. Random Forest Regressor, log-price target recovery, R2 comparison.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/capstones/capstone2_house_prices/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-pink);">Capstone 3: Fraud Detection Engine</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Imbalanced metrics, Precision-Recall curve, balanced weights fit.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/capstones/capstone3_fraud/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-pink);">Capstone 4: Customer Segmentation</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Standardized K-Means, Silhouette score, 2D PCA projection scatter.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/capstones/capstone4_segmentation/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                            <div style="padding:0.75rem; border:1px solid var(--border-color); border-radius:8px;">
+                                <h4 style="font-size:0.95rem; color:var(--accent-pink);">Capstone 5: End-to-End Production ML</h4>
+                                <p style="font-size:0.75rem; color:var(--text-muted); margin:0.25rem 0;">Full Pipeline training, Joblib serialization/API load, feature drift monitoring.</p>
+                                <a href="file:///d:/ai-forward-deployed-engineer-zero-to-hero/machine_learning/capstones/capstone5_pipeline/report.md" target="_blank" style="font-size:0.75rem; color:var(--accent-cyan); text-decoration:none; font-weight:600;">View Report →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Stats Calculators -->
+        <section id="page-stats-calculators" class="page-view" style="display: none;">
+            <div class="glass-card">
+                <h2 class="page-title">Part 1 Playground: Stats Calculators</h2>
+                <p class="page-subtitle">Interactive math calculators to simulate probability and distribution shapes.</p>
+                
+                <div class="calculator-grid">
+                    
+                    <!-- Z-Tester -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title">📊 A/B Proportions Z-Tester</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; margin-bottom: 0.5rem;">
+                            <div class="form-group"><label>Control Visitors</label><input type="number" id="ab-n-a" value="10000"></div>
+                            <div class="form-group"><label>Control Convs</label><input type="number" id="ab-c-a" value="413"></div>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                            <div class="form-group"><label>Treatment Visitors</label><input type="number" id="ab-n-b" value="10000"></div>
+                            <div class="form-group"><label>Treatment Convs</label><input type="number" id="ab-c-b" value="514"></div>
+                        </div>
+                        <div class="results-box">
+                            <div class="result-item"><span class="result-label">Control Rate:</span><span class="result-value" id="res-p-a">0%</span></div>
+                            <div class="result-item"><span class="result-label">Treatment Rate:</span><span class="result-value" id="res-p-b">0%</span></div>
+                            <div class="result-item"><span class="result-label">Z-Stat:</span><span class="result-value" id="res-z">0.0</span></div>
+                            <div class="result-item"><span class="result-label">p-Value:</span><span class="result-value" id="res-pval">1.0</span></div>
+                            <div class="result-item" style="border-top:1px solid rgba(255,255,255,0.08); padding-top:0.25rem;"><span class="result-label">Decision:</span><span class="result-value" id="res-decision">-</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Bayes -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title">🎲 Bayes Theorem Posterior Calculator</h3>
+                        <div class="form-group">
+                            <label>Prior Probability P(A)</label>
+                            <div class="slider-container"><input type="range" id="bayes-prior" min="0.001" max="0.30" step="0.001" value="0.01"><span class="slider-val" id="bayes-prior-val">0.01</span></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Sensitivity P(B|A)</label>
+                            <div class="slider-container"><input type="range" id="bayes-sens" min="0.50" max="0.99" step="0.01" value="0.95"><span class="slider-val" id="bayes-sens-val">0.95</span></div>
+                        </div>
+                        <div class="form-group">
+                            <label>False Positive P(B|not A)</label>
+                            <div class="slider-container"><input type="range" id="bayes-fpr" min="0.01" max="0.30" step="0.01" value="0.05"><span class="slider-val" id="bayes-fpr-val">0.05</span></div>
+                        </div>
+                        <div class="results-box">
+                            <div class="result-item"><span class="result-label">P(B) - Symptoms/VPN Traffic:</span><span class="result-value" id="res-bayes-evidence">0%</span></div>
+                            <div class="result-item" style="border-top:1px solid rgba(255,255,255,0.08); padding-top:0.25rem;"><span class="result-label" style="color:var(--accent-cyan);">Posterior P(A|B) - True Positive:</span><span class="result-value" id="res-bayes-post" style="color:var(--accent-cyan); font-weight:700;">0%</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Shape visualizer -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title">📈 Skewness & Kurtosis Visualizer</h3>
+                        <div class="form-group">
+                            <label>Skewness (Shape asymmetry)</label>
+                            <div class="slider-container"><input type="range" id="dist-skew" min="-2.0" max="2.0" step="0.1" value="0.0"><span class="slider-val" id="dist-skew-val">0.0</span></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Excess Kurtosis (Tails weight)</label>
+                            <div class="slider-container"><input type="range" id="dist-kurt" min="-1.0" max="3.0" step="0.1" value="0.0"><span class="slider-val" id="dist-kurt-val">0.0</span></div>
+                        </div>
+                        <div style="background: rgba(10,12,18,0.5); border-radius: 8px; padding: 0.5rem; border: 1px solid var(--border-color);"><canvas id="dist-chart-canvas" width="300" height="150" style="width:100%; height:150px;"></canvas></div>
+                    </div>
+
+                    <!-- Correlation matrix -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title">🔗 Collinearity & Heatmap</h3>
+                        <table class="corr-matrix-table">
+                            <thead><tr><th>Feature</th><th>Price</th><th>Living</th><th>Rooms</th></tr></thead>
+                            <tbody>
+                                <tr><th>Price</th><td>1.0</td><td>0.85</td><td>0.72</td></tr>
+                                <tr><th>Living</th><td>0.85</td><td>1.0</td><td><input type="number" id="corr-r1" class="corr-input" value="0.88" step="0.01"></td></tr>
+                                <tr><th>Rooms</th><td>0.72</td><td>0.88 (mirror)</td><td>1.0</td></tr>
+                            </tbody>
+                        </table>
+                        <div class="results-box" id="res-collinear-report" style="margin-top:0.75rem; min-height:80px;"></div>
+                    </div>
+
+                    <!-- Churn Optimizer -->
+                    <div class="calc-panel" style="grid-column: span 2;">
+                        <h3 class="calc-title">🛡️ Churn Utility-Threshold Optimizer</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem;">
+                            <div class="form-group"><label>Threshold</label><div class="slider-container"><input type="range" id="churn-thresh" min="0.05" max="0.95" step="0.05" value="0.30"><span class="slider-val" id="churn-thresh-val">0.30</span></div></div>
+                            <div class="form-group"><label>CLV ($)</label><input type="number" id="churn-clv" value="150"></div>
+                            <div class="form-group"><label>Incentive Cost ($)</label><input type="number" id="churn-incentive" value="15"></div>
+                        </div>
+                        <div class="results-box" style="display: grid; grid-template-columns: 1fr 1fr 1fr; text-align: center; min-height:80px; align-items:center;">
+                            <div><span class="result-label">TP/FP/FN Counts</span><div style="font-size:0.95rem; font-weight:600; color:var(--text-main); margin-top:0.25rem;">TP: <span id="res-churn-tp">-</span> | FP: <span id="res-churn-fp">-</span> | FN: <span id="res-churn-fn">-</span></div></div>
+                            <div><span class="result-label">Cohort Savings</span><div style="font-size:1.15rem; font-weight:700; color:var(--accent-cyan);" id="res-churn-savings">$0</div></div>
+                            <div><span class="result-label">Savings over Baseline</span><div style="font-size:1.15rem; font-weight:700; color:var(--accent-emerald);" id="res-churn-net">+$0</div></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: ML Simulators -->
+        <section id="page-ml-simulators" class="page-view" style="display: none;">
+            <div class="glass-card card-header-pink">
+                <h2 class="page-title">Part 2 Playground: ML Simulators</h2>
+                <p class="page-subtitle">Interactive visualizers for feature engineering scaling, regression curves, matrix calculations, and learning rates.</p>
+                
+                <div class="calculator-grid">
+                    
+                    <!-- Scaling visualizer -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title" style="color:var(--accent-pink);">⚖️ Feature Scaling Visualizer</h3>
+                        <div class="form-group">
+                            <label for="scaler-raw-inputs">Raw numerical features (comma-separated)</label>
+                            <input type="text" id="scaler-raw-inputs" value="10, 25, 45, 80, 150">
+                        </div>
+                        <div class="form-group">
+                            <label for="scaler-type-select">Select Scaler Type</label>
+                            <select id="scaler-type-select">
+                                <option value="standard">StandardScaler (Standardise: Mean=0, Std=1)</option>
+                                <option value="minmax">MinMaxScaler (Normalise: Range [0, 1])</option>
+                            </select>
+                        </div>
+                        <div class="results-box" id="scaler-output-list" style="min-height: 120px;">
+                            <!-- Outputs load here -->
+                        </div>
+                    </div>
+
+                    <!-- Regression fitting -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title" style="color:var(--accent-pink);">📉 OLS vs. Decision Tree Fitting</h3>
+                        <div class="form-group">
+                            <label>Data Noise level</label>
+                            <div class="slider-container"><input type="range" id="reg-noise" min="0" max="25" step="1" value="8"><span class="slider-val" id="reg-noise-val">8</span></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="reg-model-select">Select Model Fit</label>
+                            <select id="reg-model-select">
+                                <option value="linear">OLS Linear Regression (Linear Slope)</option>
+                                <option value="tree">Decision Tree Regressor (Step Splits)</option>
+                            </select>
+                        </div>
+                        <div style="background: rgba(10,12,18,0.5); border-radius: 8px; padding: 0.5rem; border: 1px solid var(--border-color);"><canvas id="reg-fit-canvas" width="300" height="150" style="width:100%; height:150px;"></canvas></div>
+                    </div>
+
+                    <!-- Confusion matrix ROC -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title" style="color:var(--accent-pink);">📋 Confusion Matrix Evaluator</h3>
+                        <div class="confusion-matrix-grid">
+                            <span class="matrix-header">Actual</span>
+                            <div class="matrix-cell"><label>TP</label><input type="number" id="matrix-tp" value="80" min="0"></div>
+                            <div class="matrix-cell"><label>FP</label><input type="number" id="matrix-fp" value="10" min="0"></div>
+                            <span class="matrix-header"></span>
+                            <div class="matrix-cell"><label>FN</label><input type="number" id="matrix-fn" value="20" min="0"></div>
+                            <div class="matrix-cell"><label>TN</label><input type="number" id="matrix-tn" value="890" min="0"></div>
+                        </div>
+                        
+                        <div class="results-box" style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; min-height: 100px; padding:0.5rem 1rem; align-items:center;">
+                            <div style="font-size:0.8rem; line-height: 1.6;">
+                                <div>Accuracy: <span class="result-value" id="res-matrix-acc">0%</span></div>
+                                <div>Precision: <span class="result-value" id="res-matrix-prec">0%</span></div>
+                                <div>Recall: <span class="result-value" id="res-matrix-rec">0%</span></div>
+                                <div>F1-Score: <span class="result-value" id="res-matrix-f1">0%</span></div>
+                            </div>
+                            <div style="background: rgba(10,12,18,0.5); border-radius: 8px; padding: 0.25rem; border: 1px solid var(--border-color);"><canvas id="matrix-roc-canvas" width="120" height="100" style="width:100%; height:80px;"></canvas></div>
+                        </div>
+                    </div>
+
+                    <!-- HPO Learning curves -->
+                    <div class="calc-panel">
+                        <h3 class="calc-title" style="color:var(--accent-pink);">⚙️ Bias-Variance (HPO) curves</h3>
+                        <div class="form-group">
+                            <label>Tree Max Depth parameter</label>
+                            <div class="slider-container"><input type="range" id="hpo-depth" min="1" max="10" step="1" value="5"><span class="slider-val" id="hpo-depth-val">5</span></div>
+                        </div>
+                        <div class="results-box" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 0.5rem; min-height: 110px; padding:0.5rem; align-items:center;">
+                            <div style="font-size:0.8rem; line-height:1.6;">
+                                <div>Train Score: <span class="result-value" id="res-hpo-train" style="color:var(--accent-emerald);">0%</span></div>
+                                <div>Val Score: <span class="result-value" id="res-hpo-val" style="color:var(--accent-purple);">0%</span></div>
+                                <div style="border-top:1px solid rgba(255,255,255,0.08); margin-top:0.25rem; padding-top:0.25rem;"><span id="res-hpo-status">-</span></div>
+                            </div>
+                            <div style="background: rgba(10,12,18,0.5); border-radius: 8px; padding: 0.25rem; border: 1px solid var(--border-color);"><canvas id="hpo-chart-canvas" width="120" height="100" style="width:100%; height:80px;"></canvas></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Knowledge checkpoints (Quizzes) -->
+        <section id="page-quizzes" class="page-view" style="display: none;">
+            <div class="glass-card">
+                <h2 class="page-title">Knowledge Checkpoints</h2>
+                <p class="page-subtitle">Take an interactive multiple-choice quiz on any module to validate your understanding.</p>
+                
+                <div class="quiz-welcome">
+                    <div class="quiz-select-container">
+                        <label style="display:block; font-size:0.9rem; color:var(--text-muted); margin-bottom:0.5rem;">Select Course Module:</label>
+                        <select id="quiz-module-select">
+                            <optgroup label="📊 Part 1: Statistics & Probability">
+                                <option value="1">Module 1: Descriptive Statistics</option>
+                                <option value="2">Module 2: Data Distribution</option>
+                                <option value="3">Module 3: Correlation Analysis</option>
+                                <option value="4">Module 4: Sampling & Statistical Inference</option>
+                                <option value="5">Module 5: Statistics for Machine Learning</option>
+                                <option value="6">Module 6: Probability Fundamentals</option>
+                                <option value="7">Module 7: Bayes Theorem</option>
+                                <option value="8">Module 8: Random Variables & Expected Value</option>
+                                <option value="9">Module 9: Probability Distributions</option>
+                                <option value="10">Module 10: Probability in Machine Learning</option>
+                            </optgroup>
+                            <optgroup label="🤖 Part 2: Machine Learning Core">
+                                <option value="11">ML Module 1: Feature Engineering</option>
+                                <option value="12">ML Module 2: Supervised Learning</option>
+                                <option value="13">ML Module 3: Unsupervised Learning</option>
+                                <option value="14">ML Module 4: Model Evaluation</option>
+                                <option value="15">ML Module 5: Hyperparameter Tuning</option>
+                                <option value="16">ML Module 6: Scikit-Learn Pipelines</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="quiz-questions-container" style="min-height: 300px;">
+                    <!-- Injected via app.js -->
+                </div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 1rem; color: var(--text-muted); font-size: 0.9rem;">
+                    <span id="quiz-progress-text">Question 1 of 3</span>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
