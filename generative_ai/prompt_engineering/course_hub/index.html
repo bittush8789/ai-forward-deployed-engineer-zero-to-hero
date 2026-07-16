@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise Prompt Engineering Academy</title>
+  <!-- Google Fonts Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Backdrop Blur Effects -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo-area">
+        <div class="logo-icon">PE</div>
+        <div>
+          <h2>PE Academy</h2>
+          <span class="subtext">Enterprise LLM Systems</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="lessons">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+          Theory Modules
+        </button>
+        <button class="nav-item" data-tab="playground">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+          Project Playground
+        </button>
+        <button class="nav-item" data-tab="quiz">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          Quiz & Prep
+        </button>
+        <button class="nav-item" data-tab="calculator">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 11h.01M12 7h.01M9 11h.01M12 14h.01M15 11h.01M15 7h.01M18 21H6a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2z" /></svg>
+          Cost & Caching Calcs
+        </button>
+        <button class="nav-item" data-tab="security">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+          Threat Simulator
+        </button>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span class="version-tag">Version 1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      
+      <!-- HEADER -->
+      <header class="content-header">
+        <div class="header-titles">
+          <span class="pretitle">AI Forward Deployed Engineer Path</span>
+          <h1 id="page-title">Theory Modules</h1>
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle" class="btn-icon">
+            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- TAB CONTENTS -->
+      <div class="tab-viewport">
+        
+        <!-- LESSONS TAB -->
+        <section id="tab-lessons" class="tab-pane active">
+          <div class="search-bar-container">
+            <input type="text" id="lesson-search" class="form-control" placeholder="Search modules by topic or keyword (e.g. RAG, security, cache)...">
+          </div>
+          
+          <div class="lesson-layout">
+            <!-- Left Sidebar: Module List -->
+            <div class="lesson-sidebar card">
+              <h3>Academy Syllabus</h3>
+              <div class="lesson-list" id="lesson-list-items">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+            
+            <!-- Right Pane: Lesson Content -->
+            <div class="lesson-viewer card">
+              <div id="lesson-viewer-placeholder" class="viewer-placeholder">
+                <svg class="icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                <p>Select a module from the syllabus to start studying.</p>
+              </div>
+              <div id="lesson-viewer-content" class="viewer-content hidden">
+                <div class="viewer-header">
+                  <h2 id="lesson-title">Module Title</h2>
+                  <a href="#" id="lesson-markdown-link" target="_blank" class="btn-secondary">Open Markdown Guide</a>
+                </div>
+                <div id="lesson-body" class="lesson-body-markdown">
+                  <!-- Injected dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PLAYGROUND TAB -->
+        <section id="tab-playground" class="tab-pane">
+          <div class="playground-layout">
+            <!-- Left: Selector & Configurations -->
+            <div class="playground-controls card">
+              <h3>Select Practical Project</h3>
+              <div class="form-group">
+                <select id="project-selector" class="form-control">
+                  <!-- Injected dynamically -->
+                </select>
+              </div>
+              
+              <div class="project-details-box">
+                <h4 id="project-title">Project Name</h4>
+                <p id="project-description" class="subtext">Project description goes here.</p>
+              </div>
+
+              <div class="divider"></div>
+              
+              <h3>Prompt Variables</h3>
+              <div id="project-variables-container">
+                <!-- Dynamic Input Fields injected here -->
+              </div>
+              
+              <button id="btn-compile" class="btn-primary">Compile & Assemble Prompt</button>
+            </div>
+            
+            <!-- Right: Prompt Assembly & Mock Run -->
+            <div class="playground-viewer">
+              <div class="card terminal-card">
+                <div class="terminal-header">
+                  <span>SYSTEM PROMPT TEMPLATE</span>
+                </div>
+                <textarea id="playground-system-prompt" class="terminal-area" readonly></textarea>
+              </div>
+              
+              <div class="card terminal-card mt-4">
+                <div class="terminal-header font-green">
+                  <span>DYNAMIC ASSEMBLED USER PROMPT</span>
+                </div>
+                <textarea id="playground-user-prompt" class="terminal-area" readonly placeholder="Click Compile & Assemble to see the populated prompt template..."></textarea>
+              </div>
+              
+              <div class="run-row mt-4">
+                <button id="btn-test-prompt" class="btn-accent w-full">Simulate LLM Inference Engine Call</button>
+              </div>
+              
+              <div class="card terminal-card mt-4">
+                <div class="terminal-header font-amber">
+                  <span>MOCK LLM GENERATION OUTPUT</span>
+                </div>
+                <div id="playground-output" class="terminal-output-panel">
+                  <em>Inference logs will display here...</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUIZ TAB -->
+        <section id="tab-quiz" class="tab-pane">
+          <div class="quiz-grid">
+            <!-- Left: Live Quiz Simulator -->
+            <div class="card quiz-card">
+              <div class="quiz-header">
+                <h3>Enterprise Certification Practice Quiz</h3>
+                <span id="quiz-progress" class="badge">Question 1 of 5</span>
+              </div>
+              
+              <div class="quiz-content mt-4">
+                <h4 id="quiz-question-text">Question text goes here?</h4>
+                <div class="quiz-options-list" id="quiz-options-container">
+                  <!-- Options injected dynamically -->
+                </div>
+              </div>
+              
+              <div class="quiz-footer mt-4">
+                <div id="quiz-feedback" class="feedback-panel hidden">
+                  <span id="feedback-badge" class="badge-success">Correct</span>
+                  <p id="feedback-text" class="subtext mt-2">Explanation text.</p>
+                </div>
+                <button id="btn-next-question" class="btn-primary mt-4 hidden">Next Question</button>
+                <div id="quiz-completion" class="completion-panel hidden">
+                  <h4>Quiz Completed!</h4>
+                  <p>Your Score: <strong id="quiz-score-val">0</strong> / <span id="quiz-total-val">0</span></p>
+                  <button id="btn-reset-quiz" class="btn-secondary mt-2">Restart Quiz</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right: Interview Q&A Flashcard Viewer -->
+            <div class="card qa-card">
+              <h3>High-Yield Interview Prep Questions</h3>
+              <p class="subtext">Review enterprise architect questions for LLMs, RAG, and Agents.</p>
+              
+              <div class="qa-viewer mt-4" id="interview-qa-container">
+                <!-- Injected dynamically -->
+              </div>
+              
+              <div class="mt-4 text-center">
+                <a href="../interview_prep.md" target="_blank" class="btn-secondary w-full block-link">Open Full Interview Guide (Markdown)</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CALCULATOR TAB -->
+        <section id="tab-calculator" class="tab-pane">
+          <div class="card max-w-xl mx-auto">
+            <h3>Prompt Cost & Caching Calculator</h3>
+            <p class="subtext">Estimate monthly cloud expenditures and optimize cache hit budgets.</p>
+            
+            <div class="divider"></div>
+            
+            <div class="form-group">
+              <label for="calc-model">LLM Model Class</label>
+              <select id="calc-model" class="form-control">
+                <option value="sonnet" data-input="3.00" data-output="15.00" data-cached="0.30">Claude 3.5 Sonnet ($3.00 / $15.00 per M tok, Cache Read: $0.30)</option>
+                <option value="haiku" data-input="0.80" data-output="4.00" data-cached="0.08">Claude 3.5 Haiku ($0.80 / $4.00 per M tok, Cache Read: $0.08)</option>
+                <option value="gpt4o" data-input="2.50" data-output="10.00" data-cached="1.25">GPT-4o ($2.50 / $10.00 per M tok, Cache Read: $1.25)</option>
+                <option value="gpt4o-mini" data-input="0.15" data-output="0.60" data-cached="0.075">GPT-4o-Mini ($0.15 / $0.60 per M tok, Cache Read: $0.075)</option>
+              </select>
+            </div>
+            
+            <div class="calc-row mt-4">
+              <div class="calc-col">
+                <label>Input Prompt Tokens (Static + Dynamic)</label>
+                <input type="range" id="calc-input-slider" min="100" max="20000" step="100" value="2000" class="slider">
+                <span class="slider-val" id="calc-input-val">2,000 tokens</span>
+              </div>
+              <div class="calc-col">
+                <label>Output Generation Tokens</label>
+                <input type="range" id="calc-output-slider" min="50" max="4000" step="50" value="500" class="slider">
+                <span class="slider-val" id="calc-output-val">500 tokens</span>
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="calc-volume">Monthly Inference API Calls</label>
+              <input type="number" id="calc-volume" class="form-control" value="100000">
+            </div>
+
+            <div class="form-group mt-4">
+              <label>System Prompt Cache Hit Ratio (%)</label>
+              <input type="range" id="calc-cache-slider" min="0" max="100" value="60" class="slider">
+              <span class="slider-val" id="calc-cache-val">60% Cache Hits</span>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="cost-results-grid">
+              <div class="cost-box">
+                <span class="cost-label">Unoptimized Cost (No Caching)</span>
+                <span class="cost-value font-red" id="cost-unoptimized">$0.00</span>
+              </div>
+              <div class="cost-box">
+                <span class="cost-label">Optimized Cost (With Cache Hits)</span>
+                <span class="cost-value font-green" id="cost-optimized">$0.00</span>
+              </div>
+              <div class="cost-box full-width">
+                <span class="cost-label">Estimated Monthly Savings</span>
+                <span class="cost-value font-gold" id="cost-savings">$0.00 (0.00%)</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECURITY TAB -->
+        <section id="tab-security" class="tab-pane">
+          <div class="playground-layout">
+            <!-- Controls -->
+            <div class="playground-controls card">
+              <h3>Prompt Jailbreak Sandbox</h3>
+              <p class="subtext">Test how prompt injection bypasses standard instruction templates and examine security defense configurations.</p>
+              
+              <div class="divider"></div>
+              
+              <div class="form-group">
+                <label for="threat-template">Select Security Scenario</label>
+                <select id="threat-template" class="form-control">
+                  <option value="direct">Direct Rule Override (DAN Attack)</option>
+                  <option value="delimiter">Delimiter Breakout Collision</option>
+                  <option value="exfiltration">Proprietary Rule Exfiltration Request</option>
+                </select>
+              </div>
+
+              <div class="form-group mt-4">
+                <label>Untrusted Payload Input</label>
+                <textarea id="threat-user-payload" class="form-control h-24" placeholder="Type adversarial text here..."></textarea>
+              </div>
+
+              <div class="form-group mt-4">
+                <label class="checkbox-container">
+                  <input type="checkbox" id="threat-toggle-defense" checked>
+                  <span class="checkmark"></span>
+                  Enable Dynamic Injection Delimiter Guard & Sanitizer
+                </label>
+              </div>
+              
+              <button id="btn-fire-threat" class="btn-primary mt-4">Compile & Inject Attack</button>
+            </div>
+            
+            <!-- Terminal Output -->
+            <div class="playground-viewer">
+              <div class="card terminal-card">
+                <div class="terminal-header font-red">
+                  <span>ASSEMBLED PAYLOAD RECEIVED BY LLM</span>
+                </div>
+                <textarea id="threat-assembled-prompt" class="terminal-area" readonly placeholder="Click Compile & Inject to view context..."></textarea>
+              </div>
+
+              <div class="card terminal-card mt-4">
+                <div class="terminal-header font-amber">
+                  <span>THREAT RESPONSE SIMULATOR</span>
+                </div>
+                <div id="threat-simulation-output" class="terminal-output-panel">
+                  <em>Inference results will display here...</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Unified JS Data and logic -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

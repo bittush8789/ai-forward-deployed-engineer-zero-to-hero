@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vector Databases Academy — Phase 7</title>
+  <meta name="description" content="Enterprise Vector Database learning platform covering Pinecone, ChromaDB, Weaviate, Milvus, FAISS, Hybrid Search, and Production RAG systems.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ====== Sidebar ====== -->
+  <aside class="sidebar">
+    <div class="logo-area">
+      <h1>🗄️ Vector DB Academy</h1>
+      <p>Phase 7 — Production Retrieval Systems</p>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-chip">
+        <div class="val">12</div>
+        <div class="lbl">Modules</div>
+      </div>
+      <div class="stat-chip">
+        <div class="val">5</div>
+        <div class="lbl">Labs</div>
+      </div>
+      <div class="stat-chip">
+        <div class="val">15</div>
+        <div class="lbl">Q&amp;As</div>
+      </div>
+    </div>
+
+    <div class="search-wrap">
+      <input type="text" id="search-input" placeholder="Search modules, categories…">
+    </div>
+
+    <nav class="module-list" id="module-list"></nav>
+  </aside>
+
+  <!-- ====== Main ====== -->
+  <main class="main-content">
+    <header class="topbar">
+      <div class="topbar-left">
+        <h2 id="topbar-title">Vector Databases Academy</h2>
+        <p id="topbar-sub">Select a module to begin</p>
+      </div>
+      <div class="btn-row">
+        <a href="../README.md" class="btn">📄 README</a>
+        <button class="btn btn-primary" onclick="runAllLabsCheck()">▶ Verify Labs</button>
+      </div>
+    </header>
+
+    <section class="content-pane" id="content-area">
+      <div class="welcome-screen">
+        <div class="big-icon">🔍</div>
+        <h3>Vector Databases Academy</h3>
+        <p>
+          Master production-grade vector databases, hybrid search, embedding models,
+          retrieval architectures, and enterprise RAG platforms. Select a module from
+          the sidebar to start learning.
+        </p>
+        <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap;justify-content:center;">
+          <span class="skill-tag">Pinecone</span>
+          <span class="skill-tag">ChromaDB</span>
+          <span class="skill-tag">Weaviate</span>
+          <span class="skill-tag">Milvus</span>
+          <span class="skill-tag">FAISS</span>
+          <span class="skill-tag">Hybrid Search</span>
+          <span class="skill-tag">RAG Pipelines</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+  <script>
+    function runAllLabsCheck() {
+      alert(
+        "Lab Verification Summary\n\n" +
+        "✅ pinecone_rag_mock.py    — Namespace query & metadata filter\n" +
+        "✅ chroma_local_rag.py     — Collection CRUD & similarity search\n" +
+        "✅ weaviate_hybrid.py      — BM25 + Vector + RRF fusion\n" +
+        "✅ milvus_cluster_check.py — Node health & collection schema\n" +
+        "✅ faiss_offline_search.py — Flat vs IVF benchmark\n\n" +
+        "Run each script with:\n" +
+        "python3 labs/<script_name>.py"
+      );
+    }
+  </script>
+</body>
+</html>

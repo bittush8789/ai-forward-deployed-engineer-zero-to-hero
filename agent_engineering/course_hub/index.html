@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enterprise AI Agent Engineering Academy</title>
+  <!-- Google Fonts Outfit & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Backdrop Blur Orbs -->
+  <div class="glow-orb orb-1"></div>
+  <div class="glow-orb orb-2"></div>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="logo-area">
+        <div class="logo-icon">AE</div>
+        <div>
+          <h2>Agent Academy</h2>
+          <span class="subtext">FDE Production Phase</span>
+        </div>
+      </div>
+      
+      <nav class="nav-menu">
+        <button class="nav-item active" data-tab="lessons">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+          Theory Modules
+        </button>
+        <button class="nav-item" data-tab="playground">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
+          Project Playground
+        </button>
+        <button class="nav-item" data-tab="quiz">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+          Quiz & Prep
+        </button>
+        <button class="nav-item" data-tab="agent-calc">
+          <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 11h.01M12 7h.01M9 11h.01M12 14h.01M15 11h.01M15 7h.01M18 21H6a2 2 0 01-2-2V5a2 2 0 012-2h12a2 2 0 012 2v14a2 2 0 01-2 2z" /></svg>
+          Latency & Cost Calc
+        </button>
+      </nav>
+      
+      <div class="sidebar-footer">
+        <span class="version-tag">Version 1.0.0</span>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- HEADER -->
+      <header class="content-header">
+        <div class="header-titles">
+          <span class="pretitle">AI Agent Systems Architect</span>
+          <h1 id="page-title">Theory Modules</h1>
+        </div>
+        <div class="header-actions">
+          <button id="theme-toggle" class="btn-icon">
+            <svg class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+          </button>
+        </div>
+      </header>
+
+      <!-- TAB VIEWPORT -->
+      <div class="tab-viewport">
+        
+        <!-- LESSONS TAB -->
+        <section id="tab-lessons" class="tab-pane active">
+          <div class="search-bar-container">
+            <input type="text" id="lesson-search" class="form-control" placeholder="Search modules by topic (e.g. LangChain, state graph, AutoGen, CrewAI)...">
+          </div>
+          
+          <div class="lesson-layout">
+            <!-- Syllabus list -->
+            <div class="lesson-sidebar card">
+              <h3>Syllabus Modules</h3>
+              <div class="lesson-list" id="lesson-list-items">
+                <!-- Injected dynamically -->
+              </div>
+            </div>
+            
+            <!-- Detail Content -->
+            <div class="lesson-viewer card">
+              <div id="lesson-viewer-placeholder" class="viewer-placeholder">
+                <svg class="icon-large" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+                <p>Select a curriculum module to begin your training.</p>
+              </div>
+              
+              <div id="lesson-viewer-content" class="viewer-content hidden">
+                <div class="viewer-header">
+                  <h2 id="lesson-title">Module Title</h2>
+                  <a href="#" id="lesson-markdown-link" target="_blank" class="btn-secondary">Open Markdown Guide</a>
+                </div>
+                <div id="lesson-body" class="lesson-body-markdown">
+                  <!-- Injected dynamically -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PLAYGROUND TAB -->
+        <section id="tab-playground" class="tab-pane">
+          <div class="playground-layout">
+            <!-- Left: Config inputs -->
+            <div class="playground-controls card">
+              <h3>Select Enterprise Project</h3>
+              <div class="form-group">
+                <select id="project-selector" class="form-control">
+                  <!-- Injected dynamically -->
+                </select>
+              </div>
+              
+              <div class="project-details-box">
+                <h4 id="project-title">Project Name</h4>
+                <p id="project-description" class="subtext">Description details.</p>
+              </div>
+
+              <div class="divider"></div>
+              
+              <h3>Dynamic Variables</h3>
+              <div id="project-variables-container">
+                <!-- Dynamically compiled fields -->
+              </div>
+              
+              <button id="btn-compile" class="btn-primary">Compile & Assemble Prompt</button>
+            </div>
+            
+            <!-- Right: Code consoles -->
+            <div class="playground-viewer">
+              <div class="card terminal-card">
+                <div class="terminal-header">
+                  <span>SYSTEM PROMPT TEMPLATE</span>
+                </div>
+                <textarea id="playground-system-prompt" class="terminal-area" readonly></textarea>
+              </div>
+              
+              <div class="card terminal-card mt-4">
+                <div class="terminal-header font-green">
+                  <span>INJECTED RUNTIME USER PROMPT</span>
+                </div>
+                <textarea id="playground-user-prompt" class="terminal-area" readonly placeholder="Click Compile to populate prompt templates..."></textarea>
+              </div>
+              
+              <div class="run-row mt-4">
+                <button id="btn-test-prompt" class="btn-accent w-full">Simulate Local Python Script Ingestion</button>
+              </div>
+              
+              <div class="card terminal-card mt-4">
+                <div class="terminal-header font-amber">
+                  <span>MOCK SYSTEM OUTPUT RESPONSE</span>
+                </div>
+                <div id="playground-output" class="terminal-output-panel">
+                  <em>Inference results will display here...</em>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- QUIZ TAB -->
+        <section id="tab-quiz" class="tab-pane">
+          <div class="quiz-grid">
+            <!-- Quiz pane -->
+            <div class="card quiz-card">
+              <div class="quiz-header">
+                <h3>AI Agent Systems Certification Quiz</h3>
+                <span id="quiz-progress" class="badge">Question 1 of 5</span>
+              </div>
+              
+              <div class="quiz-content mt-4">
+                <h4 id="quiz-question-text">Question text goes here?</h4>
+                <div class="quiz-options-list" id="quiz-options-container">
+                  <!-- Options injected dynamically -->
+                </div>
+              </div>
+              
+              <div class="quiz-footer mt-4">
+                <div id="quiz-feedback" class="feedback-panel hidden">
+                  <span id="feedback-badge" class="badge-success">Correct</span>
+                  <p id="feedback-text" class="subtext mt-2">Explanation text.</p>
+                </div>
+                <button id="btn-next-question" class="btn-primary mt-4 hidden">Next Question</button>
+                <div id="quiz-completion" class="completion-panel hidden">
+                  <h4>Quiz Completed!</h4>
+                  <p>Your score: <strong id="quiz-score-val">0</strong> / <span id="quiz-total-val">0</span></p>
+                  <button id="btn-reset-quiz" class="btn-secondary mt-2">Restart Quiz</button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Q&A List -->
+            <div class="card qa-card">
+              <h3>High-Yield Agent System Q&As</h3>
+              <p class="subtext">Review typical interview questions regarding LangChain, state graph routing, and multi-agent coordination.</p>
+              
+              <div class="qa-viewer mt-4" id="interview-qa-container">
+                <!-- Injected dynamically -->
+              </div>
+              
+              <div class="mt-4 text-center">
+                <a href="../interview_prep.md" target="_blank" class="btn-secondary w-full block-link">Open Full Interview Guide (Markdown)</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- AGENT COST CALCULATOR -->
+        <section id="tab-agent-calc" class="tab-pane">
+          <div class="card max-w-xl mx-auto">
+            <h3>Agentic System Cost & Latency Estimator</h3>
+            <p class="subtext">Calculate token overheads and latency averages for multi-step agent runs and coordinate budgets.</p>
+            
+            <div class="divider"></div>
+            
+            <div class="form-group">
+              <label for="agent-model">Base Model API Class</label>
+              <select id="agent-model" class="form-control">
+                <option value="sonnet">Claude 3.5 Sonnet ($3.00 / $15.00 per M tokens)</option>
+                <option value="gpt4o">GPT-4o ($2.50 / $10.00 per M tokens)</option>
+                <option value="haiku">Claude 3.5 Haiku ($0.80 / $4.00 per M tokens)</option>
+                <option value="gpt4o-mini">GPT-4o-Mini ($0.15 / $0.60 per M tokens)</option>
+              </select>
+            </div>
+
+            <div class="calc-row mt-4">
+              <div class="calc-col">
+                <label>Average Steps (Loops) per Task</label>
+                <input type="range" id="agent-steps-slider" min="1" max="15" step="1" value="4" class="slider">
+                <span class="slider-val" id="agent-steps-val">4 loops</span>
+              </div>
+              <div class="calc-col">
+                <label>Number of Active Agents Involved</label>
+                <input type="range" id="agent-count-slider" min="1" max="6" step="1" value="2" class="slider">
+                <span class="slider-val" id="agent-count-val">2 agents</span>
+              </div>
+            </div>
+
+            <div class="calc-row mt-4">
+              <div class="calc-col">
+                <label>Average Input Tokens per Step</label>
+                <input type="range" id="agent-input-slider" min="500" max="15000" step="500" value="2000" class="slider">
+                <span class="slider-val" id="agent-input-val">2,000 tokens</span>
+              </div>
+              <div class="calc-col">
+                <label>Average Output Tokens per Step</label>
+                <input type="range" id="agent-output-slider" min="100" max="3000" step="100" value="300" class="slider">
+                <span class="slider-val" id="agent-output-val">300 tokens</span>
+              </div>
+            </div>
+
+            <div class="form-group mt-4">
+              <label for="agent-volume">Monthly Target Executions</label>
+              <input type="number" id="agent-volume" class="form-control" value="50000">
+            </div>
+
+            <div class="form-group mt-4">
+              <label class="checkbox-container">
+                <input type="checkbox" id="agent-toggle-summarization" checked>
+                <span class="checkmark"></span>
+                Enable Memory Summarization (Saves 40% Input context tokens)
+              </label>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="cost-results-grid">
+              <div class="cost-box">
+                <span class="cost-label">Estimated Avg Latency</span>
+                <span class="cost-value font-red" id="agent-est-latency">0s</span>
+              </div>
+              <div class="cost-box">
+                <span class="cost-label">Monthly Raw Token Cost</span>
+                <span class="cost-value font-green" id="agent-monthly-cost">$0.00</span>
+              </div>
+              <div class="cost-box full-width">
+                <span class="cost-label">Cost with Memory Optimization</span>
+                <span class="cost-value font-gold" id="agent-optimized-cost">$0.00</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Injected dashboard datasets and logics -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

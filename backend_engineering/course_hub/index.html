@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backend Engineering Academy</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="app.js"></script>
+</head>
+<body data-theme="dark">
+  <div class="sidebar">
+    <h1 class="logo">🚀 Backend Academy</h1>
+    <nav>
+      <ul id="nav-list">
+        <!-- Filled by app.js -->
+      </ul>
+    </nav>
+  </div>
+  <main class="content">
+    <header class="header">
+      <h2 id="page-title">Welcome</h2>
+      <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
+    </header>
+    <section id="lesson-view" class="lesson-view">
+      <div id="lesson-placeholder" class="placeholder">
+        <p>Select a module from the left navigation to begin learning.</p>
+      </div>
+      <div id="lesson-content" class="hidden">
+        <h3 id="lesson-title"></h3>
+        <div id="lesson-body"></div>
+        <a id="lesson-link" target="_blank" rel="noopener">Read full markdown</a>
+      </div>
+    </section>
+    <section id="quiz-section" class="quiz-section hidden">
+      <h3>Quiz</h3>
+      <div id="quiz-question"></div>
+      <div id="quiz-options" class="options"></div>
+      <div id="quiz-feedback" class="feedback hidden">
+        <span id="quiz-badge" class="badge"></span>
+        <p id="quiz-explanation"></p>
+        <button id="quiz-next">Next Question</button>
+      </div>
+    </section>
+    <section id="playground-section" class="playground-section hidden">
+      <h3>Playground</h3>
+      <select id="project-select"></select>
+      <div id="project-details" class="project-details"></div>
+      <button id="run-project" class="btn-primary">Run Project</button>
+      <pre id="project-output" class="output"></pre>
+    </section>
+  </main>
+</body>
+</html>
